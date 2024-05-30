@@ -1,32 +1,31 @@
 {
   "name": "example_function",
-  "description": " \" Forces the AI to make a yes/no choice on the situation at hand.",
-  "parameters": [
-    {
-      "name": "decision",
-      "param_type": "bool",
-      "description": ""
+  "description": "Forces the AI to make a yes/no choice on the situation at hand.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "_reasoning": {
+        "type": "Option",
+        "description": "The justification as to why the decision was made."
+      },
+      "_answer": {
+        "type": "String",
+        "description": "Yes or no string which represents the decision."
+      },
+      "_decision": {
+        "type": "bool",
+        "description": "The answer to the decision, true for yes, false for no."
+      },
+      "_confidence": {
+        "type": "Vec",
+        "description": "Floating point confidence values of the decisions."
+      }
     },
-    {
-      "name": "confidence",
-      "param_type": "Vec",
-      "description": ""
-    },
-    {
-      "name": "answer",
-      "param_type": "String",
-      "description": ""
-    },
-    {
-      "name": "reasoning",
-      "param_type": "Option",
-      "description": ""
-    }
-  ],
-  "required": [
-    "decision",
-    "confidence",
-    "answer",
-    "reasoning"
-  ]
+    "required": [
+      "_decision",
+      "_confidence",
+      "_answer",
+      "_reasoning"
+    ]
+  }
 }

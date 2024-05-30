@@ -14,16 +14,16 @@ use assist_macro::generate_tools_config;
 #[generate_tools_config]
 /// Forces the AI to make a yes/no choice on the situation at hand.
 ///
-/// # Parameters
-/// - `decision`: The answer to the decision, true for yes, false for no.
-/// - `confidence`: Floating point confidence values of the decisions.
-/// - `answer`: Yes or no string which represents the decision.
-/// - `reasoning`: The justification as to why the decision was made.
+/// :param decision: The answer to the decision, true for yes, false for no.
+/// :param confidence: Floating point confidence values of the decisions.
+/// :param answer: Yes or no string which represents the decision.
+/// :param reasoning: The justification as to why the decision was made.
+/// :return: A string explaining the decision.
 fn example_function(
-    decision: bool,
-    confidence: Vec<Vec<f64>>,
-    answer: String,
-    reasoning: Option<String>,
+    _decision: bool,
+    _confidence: Vec<Vec<f64>>,
+    _answer: String,
+    _reasoning: Option<String>,
 ) -> String {
     "Decision made.".to_string()
 }
