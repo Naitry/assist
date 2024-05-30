@@ -1,0 +1,32 @@
+{
+  "name": "example_function",
+  "description": " \" Forces the AI to make a yes/no choice on the situation at hand.",
+  "parameters": [
+    {
+      "name": "decision",
+      "param_type": "bool",
+      "description": ""
+    },
+    {
+      "name": "confidence",
+      "param_type": "Vec",
+      "description": ""
+    },
+    {
+      "name": "answer",
+      "param_type": "String",
+      "description": ""
+    },
+    {
+      "name": "reasoning",
+      "param_type": "Option",
+      "description": ""
+    }
+  ],
+  "required": [
+    "decision",
+    "confidence",
+    "answer",
+    "reasoning"
+  ]
+}
